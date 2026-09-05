@@ -1,20 +1,8 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "api/index.js",
-      "use": "@vercel/node"
+      "source": "/(.*)",
+      "destination": "/api"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/index.js"
-    }
-  ],
-  "env": {
-    "AIRTEL_CLIENT_ID": "@airtel_client_id",
-    "AIRTEL_CLIENT_SECRET": "@airtel_client_secret",
-    "AIRTEL_API_KEY": "@airtel_api_key"
-  }
+  ]
 }
